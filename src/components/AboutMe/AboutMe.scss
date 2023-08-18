@@ -8,11 +8,12 @@
   display: flex;
   flex-grow: 1;
   align-items: stretch;
-  padding: 2rem;
+  padding: 0.5rem 2rem;
   overflow: hidden;
 
   .left-column {
     flex: 0 0 auto;
+    max-height: calc(100svh - 200px);
     width: 30%;
     position: sticky;
     padding-right: 2rem;
@@ -45,14 +46,35 @@
         flex-wrap: wrap;
 
         .tool-icon {
-          width: 4rem !important;
-          height: 4rem !important;
+          width: 10% !important;
+          height: 10% !important;
+          min-width: 50px;
+          min-height: 50px;
           filter: grayscale(0.7);
           transition: 600ms ease-in-out all;
 
           &:hover {
             filter: grayscale(0);
           }
+        }
+      }
+    }
+
+    .icons-container {
+      margin-top: 3rem;
+      bottom: 0;
+      display: flex;
+      gap: 2rem;
+      margin: 0 auto;
+
+      .icon {
+        font-size: 2rem !important;
+        color: #ccc !important;
+        transition: color 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+          color: #327d71 !important;
         }
       }
     }
@@ -78,23 +100,6 @@
 
     .section-title {
       color: #ccc;
-    }
-  }
-
-  .icons-container {
-    display: flex;
-    gap: 2rem;
-    margin: 0 auto;
-
-    .icon {
-      font-size: 2rem !important;
-      color: #ccc !important;
-      transition: color 0.3s ease;
-      cursor: pointer;
-
-      &:hover {
-        color: #327d71 !important;
-      }
     }
   }
 }
