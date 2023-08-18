@@ -38,8 +38,8 @@ const AboutMe = () => {
       date: "July 2023",
       technologies: ["Vue.js", "JavaScript", "TypeScript", "SCSS", "Tailwind CSS", "Pinia"],
       links: [
-        { text: "Source Code", url: "https://github.com/example/project" },
-        { text: "Live Demo", url: "https://example.com/demo" },
+        { text: "Source Code", url: "https://github.com/romans-adi/538-weather" },
+        { text: "Live Demo", url: "https://five38-weather.onrender.com/" },
       ],
     },
     {
