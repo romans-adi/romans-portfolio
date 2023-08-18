@@ -125,85 +125,91 @@ const AboutMe = () => {
             </Typography>
             <div className='tools'>
               <div className='tool-list'>
-              <div className="tool-icon" data-tooltip="HTML">
-    <Html5Original className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="CSS">
-    <Css3Original className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="SASS">
-    <SassOriginal className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="Tailwind CSS">
-    <TailwindcssPlain className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="Bootstrap">
-    <BootstrapOriginal className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="LESS">
-    <LessPlainWordmark className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="JavaScript">
-    <JavascriptOriginal className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="React">
-    <ReactOriginalWordmark className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="Vue">
-    <VuejsOriginal className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="Redux">
-    <ReduxOriginal className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="Ruby">
-    <RubyOriginal className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="RSpec">
-    <RspecOriginal className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="Rails">
-    <RailsPlainWordmark className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="PHP">
-    <PhpPlain className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="C">
-    <COriginal className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="Fedora Linux">
-    <FedoraPlain className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="Figma">
-    <FigmaOriginal className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="jQuery">
-    <JqueryPlain className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="ESLint">
-    <EslintOriginal className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="PostgreSQL">
-    <PostgresqlOriginal className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="MySQL">
-    <MysqlOriginalWordmark className="icon" />
-  </div>
-  <div className="tool-icon" data-tooltip="Gulp">
-    <GulpPlain className="icon" />
-  </div>
+                <div className="tool-icon" data-tooltip="HTML">
+                  <Html5Original className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="CSS">
+                  <Css3Original className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="SASS">
+                  <SassOriginal className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="Tailwind">
+                  <TailwindcssPlain className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="Bootstrap">
+                  <BootstrapOriginal className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="LESS">
+                  <LessPlainWordmark className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="JavaScript">
+                  <JavascriptOriginal className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="React">
+                  <ReactOriginalWordmark className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="Vue">
+                  <VuejsOriginal className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="Redux">
+                  <ReduxOriginal className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="Ruby">
+                  <RubyOriginal className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="RSpec">
+                  <RspecOriginal className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="Rails">
+                  <RailsPlainWordmark className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="PHP">
+                  <PhpPlain className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="C">
+                  <COriginal className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="Fedora">
+                  <FedoraPlain className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="Figma">
+                  <FigmaOriginal className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="jQuery">
+                  <JqueryPlain className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="ESLint">
+                  <EslintOriginal className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="PostgreSQL">
+                  <PostgresqlOriginal className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="MySQL">
+                  <MysqlOriginalWordmark className="icon" />
+                </div>
+                <div className="tool-icon" data-tooltip="Gulp">
+                  <GulpPlain className="icon" />
+                </div>
                 <div className='tool-icon' data-tooltip="npm">
-                <NpmOriginalWordmark className='icon' />
+                  <NpmOriginalWordmark className='icon' />
                 </div>
                 <div className="tool-icon" data-tooltip="Git">
-                <GitOriginal className='icon' />
+                  <GitOriginal className='icon' />
                 </div>
               </div>
             </div>
           </div>
           <div className="icons-container">
-            <FaGithub className="icon" />
-            <FaLinkedin className="icon" />
-            <FaAngellist className="icon" />
+            <a href="https://github.com/romans-adi" target="_blank" rel="noopener noreferrer" className="icon-link">
+              <FaGithub className="icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/obj513/" target="_blank" rel="noopener noreferrer" className="icon-link">
+              <FaLinkedin className="icon" />
+            </a>
+            <a href="https://wellfound.com/u/romans-spilaks" target="_blank" rel="noopener noreferrer" className="icon-link">
+              <FaAngellist className="icon" />
+            </a>
           </div>
         </div>
         <div className="right-column">
@@ -218,19 +224,19 @@ const AboutMe = () => {
             </Typography>
           </div>
           <div className="project-cards">
-        {sortedProjects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            date={project.date}
-            technologies={project.technologies}
-            links={project.links}
-          />
-        ))}
-      </div>
+            {sortedProjects.map((project) => (
+              <ProjectCard
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                date={project.date}
+                technologies={project.technologies}
+                links={project.links}
+              />
+            ))}
           </div>
         </div>
+      </div>
     </Paper >
   );
 };

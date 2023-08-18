@@ -8,12 +8,13 @@
   display: flex;
   flex-grow: 1;
   align-items: stretch;
-  padding: 0.5rem 2rem;
   overflow: hidden;
 
   .left-column {
+    padding: 2rem 0;
+    padding-left: 2rem;
     flex: 0 0 auto;
-    max-height: calc(100svh - 200px);
+    max-height: 100svh;
     width: 30%;
     position: sticky;
     padding-right: 2rem;
@@ -163,6 +164,10 @@
 
 .right-column {
   flex-grow: 1;
+  padding: 2rem 0;
+  padding-right: 2rem;
+  max-height: 100svh;
+  overflow-y: scroll;
   padding-left: 2rem;
   border-left: 1px solid #327d71;
   position: relative;
