@@ -1,0 +1,100 @@
+.about-me-container {
+  background: transparent !important;
+  color: #fff !important;
+  display: flex;
+}
+
+.two-column-container {
+  display: flex;
+  flex-grow: 1;
+  align-items: stretch;
+  padding: 2rem;
+  overflow: hidden;
+
+  .left-column {
+    flex: 0 0 auto;
+    width: 30%;
+    position: sticky;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .description {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .name {
+      font-weight: bold !important;
+    }
+
+    .position {
+      margin-top: 0.5rem;
+      color: #ccc !important;
+      text-align: end;
+    }
+
+    .tools {
+      margin-top: 2rem;
+
+      .tool-list {
+        gap: 2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .tool-icon {
+          width: 4rem !important;
+          height: 4rem !important;
+          filter: grayscale(0.7);
+          transition: 600ms ease-in-out all;
+
+          &:hover {
+            filter: grayscale(0);
+          }
+        }
+      }
+    }
+  }
+}
+
+.right-column {
+  flex-grow: 1;
+  padding-left: 2rem;
+  border-left: 1px solid #327d71;
+  position: relative;
+
+  .text-container {
+    flex: 2;
+    border-radius: 8px;
+
+    p {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      color: #fff;
+      margin-top: 1rem;
+    }
+
+    .section-title {
+      color: #ccc;
+    }
+  }
+
+  .icons-container {
+    display: flex;
+    gap: 2rem;
+    margin: 0 auto;
+
+    .icon {
+      font-size: 2rem !important;
+      color: #ccc !important;
+      transition: color 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: #327d71 !important;
+      }
+    }
+  }
+}
