@@ -3,9 +3,10 @@ import { v4 as uuidv4 } from 'uuid';
 import { FaGithub, FaLinkedin, FaAngellist } from 'react-icons/fa';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import './AboutMe.scss';
-import { Html5Original, Css3Original, SassOriginal, TailwindcssPlain, BootstrapOriginal, LessPlainWordmark, JavascriptOriginal, ReactOriginalWordmark, VuejsOriginal, ReduxOriginal, RubyOriginal, RspecOriginal, RailsPlainWordmark, PhpPlain, COriginal, FedoraPlain, FigmaOriginal, JqueryPlain, EslintOriginal, PostgresqlOriginal, MysqlOriginalWordmark, GulpPlain, NpmOriginalWordmark } from 'devicons-react';
+import { Html5Original, Css3Original, SassOriginal, TailwindcssPlain, BootstrapOriginal, LessPlainWordmark, JavascriptOriginal, ReactOriginalWordmark, VuejsOriginal, ReduxOriginal, RubyOriginal, RspecOriginal, RailsPlainWordmark, PhpPlain, COriginal, FedoraPlain, FigmaOriginal, JqueryPlain, EslintOriginal, PostgresqlOriginal, MysqlOriginalWordmark, GulpPlain, NpmOriginalWordmark, GitOriginal } from 'devicons-react';
 
 const AboutMe = () => {
+  const openToWork = true;
 
   const projects = [
     {
@@ -113,35 +114,89 @@ const AboutMe = () => {
           <div className='description'>
             <Typography variant="h3" className="name">
               Romans Špiļaks
+              {openToWork && (
+                <span className="status-badge">
+                  Open To Work
+                </span>
+              )}
             </Typography>
-            <Typography variant="h4" className="position">
+            <Typography variant="h6" className="position">
               Full Stack Software Engineer
             </Typography>
             <div className='tools'>
               <div className='tool-list'>
-                <Html5Original className='tool-icon' />
-                <Css3Original className='tool-icon' />
-                <SassOriginal className='tool-icon' />
-                <TailwindcssPlain className='tool-icon' />
-                <BootstrapOriginal className='tool-icon' />
-                <LessPlainWordmark className='tool-icon' />
-                <JavascriptOriginal className='tool-icon' />
-                <ReactOriginalWordmark className='tool-icon' />
-                <VuejsOriginal className='tool-icon' />
-                <ReduxOriginal className='tool-icon' />
-                <RubyOriginal className='tool-icon' />
-                <RspecOriginal className='tool-icon' />
-                <RailsPlainWordmark className='tool-icon' />
-                <PhpPlain className='tool-icon' />
-                <COriginal className='tool-icon' />
-                <FedoraPlain className='tool-icon' />
-                <FigmaOriginal className='tool-icon' />
-                <JqueryPlain className='tool-icon' />
-                <EslintOriginal className='tool-icon' />
-                <PostgresqlOriginal className='tool-icon' />
-                <MysqlOriginalWordmark className='tool-icon' />
-                <GulpPlain className='tool-icon' />
-                <NpmOriginalWordmark className='tool-icon' />
+              <div className="tool-icon" data-tooltip="HTML">
+    <Html5Original className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="CSS">
+    <Css3Original className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="SASS">
+    <SassOriginal className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="Tailwind CSS">
+    <TailwindcssPlain className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="Bootstrap">
+    <BootstrapOriginal className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="LESS">
+    <LessPlainWordmark className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="JavaScript">
+    <JavascriptOriginal className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="React">
+    <ReactOriginalWordmark className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="Vue">
+    <VuejsOriginal className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="Redux">
+    <ReduxOriginal className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="Ruby">
+    <RubyOriginal className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="RSpec">
+    <RspecOriginal className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="Rails">
+    <RailsPlainWordmark className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="PHP">
+    <PhpPlain className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="C">
+    <COriginal className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="Fedora Linux">
+    <FedoraPlain className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="Figma">
+    <FigmaOriginal className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="jQuery">
+    <JqueryPlain className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="ESLint">
+    <EslintOriginal className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="PostgreSQL">
+    <PostgresqlOriginal className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="MySQL">
+    <MysqlOriginalWordmark className="icon" />
+  </div>
+  <div className="tool-icon" data-tooltip="Gulp">
+    <GulpPlain className="icon" />
+  </div>
+                <div className='tool-icon' data-tooltip="npm">
+                <NpmOriginalWordmark className='icon' />
+                </div>
+                <div className="tool-icon" data-tooltip="Git">
+                <GitOriginal className='icon' />
+                </div>
               </div>
             </div>
           </div>
@@ -154,16 +209,11 @@ const AboutMe = () => {
         <div className="right-column">
           <div className="text-container">
             <Typography variant="body1" className="content">
-              I&apos;m a versatile software developer experienced in UI/UX design and proficient in HTML, CSS, JavaScript (including <strong>React</strong> and some Vue.js), as well as having some experience with PHP, <strong>Ruby</strong>, and relational databases (RDBMS). I&apos;ve deployed web applications, creating user-friendly interfaces.
+              I&apos;m a versatile software developer experienced in UI/UX design and proficient in HTML, CSS, JavaScript (including <strong>React</strong> and some Vue.js), as well as having some experience with PHP, <strong>Ruby</strong>, and relational databases (RDBMS). Recently, I learned <strong>Ruby on Rails</strong>, and I&apos;m excited to apply my knowledge. I&apos;m passionate about solving problems and finding innovative solutions.
               <br /><br />
-              I trained at Microverse, a well-known online coding school, where I gained a strong foundation in software development principles by collaborating with diverse developers.
-              <br /><br />
-              Recently, I learned <strong></strong>Ruby on Rails, and I&apos;m excited to apply my knowledge. I&apos;m passionate about solving problems and finding innovative solutions.
-              <br /><br />
-              I&apos;ve successfully executed projects that demonstrate my ability to create high-quality web solutions with engaging user experiences and efficient backend functionalities.
+              I trained at Microverse, a well-known online coding school, where I gained a strong foundation in software development principles by collaborating with diverse developers and have successfully executed projects that demonstrate my ability to create high-quality web solutions with engaging user experiences and efficient backend functionalities.
               <br /><br />
               Actively seeking new software engineering opportunities, I&apos;m dedicated, adaptable, and eager to discuss how I can contribute my skills to your team.
-              <br /><br />
               Let&apos;s connect and explore the possibilities of collaborating together to achieve exceptional results!
             </Typography>
           </div>
