@@ -1,0 +1,31 @@
+.header {
+  background-color: transparent !important;
+  font-size: 16px;
+  box-shadow: none !important;
+  margin-bottom: 0.3rem;
+
+button:hover {
+color: rgb(41, 146, 115);
+}
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .name {
+      margin-left: 1rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+
+      .navbar-element {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

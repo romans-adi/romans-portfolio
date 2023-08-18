@@ -1,0 +1,189 @@
+.about-me-container {
+  background: transparent !important;
+  color: #fff !important;
+  display: flex;
+}
+
+.two-column-container {
+  display: flex;
+  flex-grow: 1;
+  align-items: stretch;
+  padding: 0.5rem 2rem;
+  overflow: hidden;
+
+  .left-column {
+    flex: 0 0 auto;
+    max-height: calc(100svh - 200px);
+    width: 30%;
+    position: sticky;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .description {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .name {
+      font-weight: bold !important;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .status-badge {
+        display: inline-block;
+        font-family: 'Outfit', sans-serif;
+        font-weight: 500;
+        margin-right: 1.3rem;
+        position: relative;
+        padding: 0.5rem 0.5rem;
+        border-radius: 30px;
+        background: linear-gradient(135deg, #327d71, #1f524a);
+        color: #fff;
+        font-size: 14px;
+        user-select: none;
+        overflow: hidden;
+        z-index: 1;
+        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s, background-color 0.5s ease-in-out;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.5);
+          opacity: 1;
+          transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+          z-index: -1;
+        }
+
+        &:hover {
+          color: #fff;
+
+          &:before {
+            width: 100%;
+            background-color: #4f2643;
+          }
+        }
+      }
+    }
+
+    .position {
+      margin-top: 0.5rem;
+      color: #ccc !important;
+    }
+
+    .tools {
+      margin-top: 2rem;
+
+      .tool-list {
+        gap: 2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .tool-icon {
+          width: 10% !important;
+          height: 10% !important;
+          filter: grayscale(0.7);
+          position: relative;
+          transition: 2s all ease-in-out;
+
+          .icon {
+            min-width: 50px;
+            min-height: 50px;
+            width: 100% !important;
+            height: 100% !important;
+          }
+
+          &:hover {
+            filter: grayscale(0);
+
+            &::before {
+              content: attr(data-tooltip);
+              position: absolute;
+              top: -30px;
+              left: 70%;
+              transform: translateX(-50%);
+              padding: 4px 8px;
+              background-color: #141E30;
+              font-family: 'Outfit', sans-serif;
+              color: #fff;
+              font-weight: 600;
+              font-size: 0.8rem;
+              border-radius: 4px;
+              box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+              opacity: 0;
+              visibility: hidden;
+              animation: tooltipAppear 3s forwards;
+            }
+          }
+        }
+
+        @keyframes tooltipAppear {
+          0% {
+            opacity: 0;
+            visibility: visible;
+            transform: translateX(-30%) translateY(0);
+            background-color: transparent;
+          }
+          100% {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-30%) translateY(0);
+            background-color: #1f524a;
+          }
+        }
+  }
+}
+
+    .icons-container {
+      margin-top: 3rem;
+      bottom: 0;
+      display: flex;
+      gap: 2rem;
+      margin: 0 auto;
+
+      .icon {
+        font-size: 2rem !important;
+        color: #ccc !important;
+        transition: color 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+          color: #327d71 !important;
+        }
+      }
+    }
+  }
+}
+
+.right-column {
+  flex-grow: 1;
+  padding-left: 2rem;
+  border-left: 1px solid #327d71;
+  position: relative;
+
+  .text-container {
+    margin-left: 2rem;
+    text-align: justify;
+    flex: 2;
+    width: 75%;
+    line-height: 1rem;
+    border-radius: 8px;
+
+    p {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      color: #fff;
+      margin-top: 1rem;
+    }
+
+    .section-title {
+      color: #ccc;
+    }
+  }
+}
