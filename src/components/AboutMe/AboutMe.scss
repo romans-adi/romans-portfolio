@@ -15,7 +15,9 @@
     padding: 2rem 0;
     padding-left: 2rem;
     flex: 0 0 auto;
+    /* stylelint-disable-next-line csstree/validator, unit-no-unknown  */
     max-height: 100svh;
+    max-height: 100vh;
     width: 30%;
     position: sticky;
     padding-right: 2rem;
@@ -52,7 +54,7 @@
         text-align: center;
         min-width: 50px;
 
-        &:before {
+        &::before {
           content: "";
           position: absolute;
           top: 0;
@@ -68,7 +70,7 @@
         &:hover {
           color: #fff;
 
-          &:before {
+          &::before {
             width: 100%;
             background-color: #4f2643;
           }
@@ -114,7 +116,7 @@
               left: 70%;
               transform: translateX(-50%);
               padding: 4px 8px;
-              background-color: #141E30;
+              background-color: #141e30;
               font-family: 'Outfit', sans-serif;
               color: #fff;
               font-weight: 600;
@@ -146,14 +148,13 @@
       }
     }
 
-    .icons-container {
-      margin-top: 3rem;
+    .network-icons-container {
       bottom: 0;
       display: flex;
       gap: 2rem;
-      margin: 0 auto;
+      margin: 3rem auto 0;
 
-      .icon {
+      .network-icon {
         font-size: 2rem !important;
         color: #ccc !important;
         transition: color 0.3s ease;
@@ -170,7 +171,9 @@
     flex-grow: 1;
     padding: 2rem 0;
     padding-right: 2rem;
+    /* stylelint-disable-next-line csstree/validator, unit-no-unknown  */
     max-height: 100svh;
+    max-height: 100vh;
     overflow-y: scroll;
     padding-left: 2rem;
     border-left: 1px solid #327d71;
@@ -200,7 +203,6 @@
 
 @media (max-width: 796px) {
   .about-me-container {
-
     .two-column-container {
       flex-direction: column;
     }
@@ -222,13 +224,13 @@
         }
       }
 
-      .icons-container {
+      .network-icons-container {
         align-items: flex-start;
         width: 100%;
-        margin-bottom: 2rem;
-        gap: 2rem;
+        margin: 1rem 0 2rem;
+        gap: 3.2rem;
 
-        .icon-link {
+        .network-icon-link {
           max-width: 10px;
         }
       }
