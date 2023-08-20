@@ -106,7 +106,6 @@ const AboutMe = () => {
     return months.indexOf(b.date.split(' ')[0]) - months.indexOf(a.date.split(' ')[0]);
   });
 
-
   return (
     <Paper className="about-me-container" elevation={3}>
       <div className="two-column-container">

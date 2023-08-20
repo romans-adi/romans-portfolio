@@ -3,90 +3,90 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 2rem;
-}
 
-.project-card {
-  background-color: #182338 !important;
-  box-shadow: none !important;
-  color: #fff !important;
-  border: transparent;
-  padding: 1rem;
-  transition:
-  0.5s box-shadow ease-in-out,
-  2s background-color ease-in-out,
-  1s border ease-out !important;
+  .project-card {
+    background-color: #182338 !important;
+    box-shadow: none !important;
+    color: #fff !important;
+    border: transparent;
+    padding: 1rem;
+    transition:
+      0.5s box-shadow ease-in-out,
+      2s background-color ease-in-out,
+      1s border ease-out !important;
 
-  &:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: #47b8a5 0.2px solid;
-    background-color: #081225 !important;
-  }
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border: #47b8a5 0.2px solid;
+      background-color: #081225 !important;
+    }
 
-  .project-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .project-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-
-.project-date {
-  text-align: end;
-  text-transform: uppercase;
-  font-family: 'Outfit', sans-serif;
-  letter-spacing: 1px;
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-  .project-description {
-    flex: 1;
-    margin-bottom: 0.5rem;
-  }
-
-  .project-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: auto;
-
-    .technologies,
-    .links {
+    .project-content {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1rem;
+      flex-direction: column;
+      height: 100%;
 
-      .badge {
-        border-radius: 0.2rem;
-        font-size: 0.8rem;
+      .project-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
 
-        &.technology-badge {
-          padding: 0.2rem 0.5rem;
-          background-color: #10352f;
-          color: #47b8a5;
-          border: #327d71 0.3px solid;
-        }
+      .project-date {
+        text-align: end;
+        text-transform: uppercase;
+        font-family: 'Outfit', sans-serif;
+        letter-spacing: 1px;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
 
-        &.link-badge {
-          padding: 0.2rem 0.7rem;
-          font-size: 1rem;
-          text-decoration: none;
-          font-family: 'Outfit', sans-serif;
-          font-weight: 500;
-          background-color: #81b8ae;
-          color: #10352f;
-          border: #10352f 0.3px solid;
-          cursor: pointer;
-          transition: 0.2s all ease-in;
+      .project-description {
+        flex: 1;
+        margin-bottom: 0.5rem;
+      }
 
-          &:hover {
-            background-color: #fff;
+      .project-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: auto;
+
+        .technologies,
+        .links {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-top: 1rem;
+
+          .badge {
+            border-radius: 0.2rem;
+            font-size: 0.8rem;
+
+            &.technology-badge {
+              padding: 0.2rem 0.5rem;
+              background-color: #10352f;
+              color: #47b8a5;
+              border: #327d71 0.3px solid;
+            }
+
+            &.link-badge {
+              padding: 0.2rem 0.7rem;
+              font-size: 1rem;
+              text-decoration: none;
+              font-family: 'Outfit', sans-serif;
+              font-weight: 500;
+              background-color: #81b8ae;
+              color: #10352f;
+              border: #10352f 0.3px solid;
+              cursor: pointer;
+              transition: 0.2s all ease-in;
+
+              &:hover {
+                background-color: #fff;
+              }
+            }
           }
         }
       }

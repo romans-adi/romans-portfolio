@@ -8,15 +8,6 @@
 
 The **"Portfolio"** project serves as a collection of details regarding the skills and tools that were utilized in past projects.
 
-<!-- TABLE OF CONTENTS -->
-
-## Table of Contents
-
-- [Tech Stack](#tech-stack) 🛠️
-- [Authors](#authors) 🖋️
-- [Contributing](#contributing) 🤝
-- [License](#license) 📄
-
 <!-- TECH STACK -->
 
 ## Tech Stack 🛠️ <a name="tech-stack"></a>
@@ -33,7 +24,7 @@ The **"Portfolio"** project serves as a collection of details regarding the skil
 
 ## 🖋️ Authors<a name="authors"></a>
 
-  🧑‍🦲 **Romans Š.**
+  :octopus: **Romans Š.**
 
 - GitHub: [@romans-adi](https://github.com/romans-adi/)
 - Twitter: [@obj583](https://twitter.com/obj583/)
