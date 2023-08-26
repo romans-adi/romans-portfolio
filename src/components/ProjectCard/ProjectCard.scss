@@ -6,19 +6,51 @@
 
   .project-card {
     background-color: #182338 !important;
+    position: relative;
     box-shadow: none !important;
     color: #fff !important;
     border: transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 1rem;
-    transition:
-      0.5s box-shadow ease-in-out,
-      2s background-color ease-in-out,
-      1s border ease-out !important;
+    transition: all 5s ease-in-out;
+
+    .screenshot {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3;
+      transition: all 5s ease-in-out,
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
 
     &:hover {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: #081225;
+      cursor: pointer;
       border: #47b8a5 0.2px solid;
-      background-color: #081225 !important;
+      background-size: 120%;
+      transform: scale(1.03);
+    }
+
+    .screenshot-hidden {
+      opacity: 0;
+      pointer-events: none;
     }
 
     .project-content {

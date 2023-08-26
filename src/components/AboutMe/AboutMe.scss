@@ -63,13 +63,26 @@
           height: 100%;
           background-color: rgba(255, 255, 255, 0.5);
           opacity: 1;
-          transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+          transition: width 1s ease-in-out, background-color 2s ease-in-out;
           z-index: -1;
         }
 
-        &:hover {
-          color: #fff;
+        &.hovered {
+          cursor: pointer;
+          width: 20%;
 
+          a {
+            text-decoration: none;
+            color: #fff;
+          }
+
+          &::before {
+            width: 100%;
+            background-color: #4f2643;
+          }
+        }
+
+        &:hover {
           &::before {
             width: 100%;
             background-color: #4f2643;

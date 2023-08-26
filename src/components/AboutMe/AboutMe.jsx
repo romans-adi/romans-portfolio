@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Typography, Paper } from '@mui/material';
 import { v4 as uuidv4 } from 'uuid';
 import { FaGithub, FaLinkedin, FaAngellist } from 'react-icons/fa';
@@ -5,10 +6,20 @@ import {
   Html5Original, Css3Original, SassOriginal, TailwindcssPlain, BootstrapOriginal, LessPlainWordmark, JavascriptOriginal, ReactOriginalWordmark, VuejsOriginal, ReduxOriginal, RubyOriginal, RspecOriginal, RailsPlainWordmark, PhpPlain, COriginal, FedoraPlain, FigmaOriginal, JqueryPlain, EslintOriginal, PostgresqlOriginal, MysqlOriginalWordmark, GulpPlain, NpmOriginalWordmark, GitOriginal,
 } from 'devicons-react';
 import ProjectCard from '../ProjectCard/ProjectCard';
+import lolDraftImage from '../../../public/screenshots/lol-draft-2023.png';
 import './AboutMe.scss';
 
 const AboutMe = () => {
   const openToWork = true;
+  const [hovered, setHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
 
   const projects = [
     {
@@ -19,8 +30,9 @@ const AboutMe = () => {
       technologies: ['HTML', 'CSS', 'Tailwind CSS', 'Webpack', 'JavaScript'],
       links: [
         { text: 'Source Code', url: 'https://github.com/romans-adi/lol-draft-2023' },
-        { text: 'Live Demo', url: 'https://lorem-ipsum-draft-2023.onrender.com//' },
+        { text: 'Live Demo', url: 'https://lorem-ipsum-draft-2023.onrender.com/' },
       ],
+      screenshot: lolDraftImage,
     },
     {
       id: uuidv4(),
@@ -92,7 +104,7 @@ const AboutMe = () => {
       title: 'IdeaChronicler',
       description: "The 'Idea Chronicler' project is a fully functional blog application that enables users to view and interact with posts by leaving comments and liking content. It serves as a platform for users to share ideas and engage in discussions through written content.",
       date: 'August 2023',
-      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Devise', 'API'],
+      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'JavaScript', 'Stimulus', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Devise', 'API'],
       links: [
         { text: 'Source Code', url: 'https://github.com/romans-adi/IdeaChronicler' },
       ],
@@ -116,8 +128,12 @@ const AboutMe = () => {
             <Typography variant="h3" className="name">
               Romans Špiļaks
               {openToWork && (
-                <span className="status-badge">
-                  Open To Work
+                <span
+                  className={`status-badge ${hovered ? 'hovered' : ''}`}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {hovered ? (<a href="mailto:romans.spilaks@gmail.com">Contact me</a>) : 'Open To Work'}
                 </span>
               )}
             </Typography>
@@ -241,6 +257,7 @@ const AboutMe = () => {
               <ProjectCard
                 key={project.id}
                 title={project.title}
+                screenshot={project.screenshot}
                 description={project.description}
                 date={project.date}
                 technologies={project.technologies}
