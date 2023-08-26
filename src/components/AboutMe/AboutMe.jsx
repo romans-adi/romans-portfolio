@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Typography, Paper } from '@mui/material';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { v4 as uuidv4 } from 'uuid';
 import { FaGithub, FaLinkedin, FaAngellist } from 'react-icons/fa';
 import {
@@ -133,7 +134,11 @@ const AboutMe = () => {
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
-                  {hovered ? (<a href="mailto:romans.spilaks@gmail.com">Contact me</a>) : 'Open To Work'}
+                  {hovered ? (
+                    <a href="mailto:romans.spilaks@gmail.com">
+                      <MailOutlineIcon fontSize="small" />
+                    </a>
+                  ) : 'Open To Work'}
                 </span>
               )}
             </Typography>
