@@ -110,6 +110,17 @@ const AboutMe = () => {
         { text: 'Source Code', url: 'https://github.com/romans-adi/IdeaChronicler' },
       ],
     },
+    {
+      id: uuidv4(),
+      title: 'Ultimate Recipe Assistant',
+      description: 'Ultimate Recipe Assistant is a cooking app with user authentication and authorization, featuring models like User, Food, Recipe, and Recipe Food, complete with data validations, CRUD actions, and optimized queries to simplify kitchen adventures.',
+      date: 'September 2023',
+      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Devise'],
+      links: [
+        { text: 'Source Code', url: 'https://github.com/romans-adi/recipe-app' },
+        { text: 'Live Demo', url: 'https://ultimate-recipe-assistant.onrender.com/' },
+      ],
+    },
   ];
 
   const sortedProjects = projects.sort((a, b) => {
