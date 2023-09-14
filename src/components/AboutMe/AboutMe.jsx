@@ -121,7 +121,7 @@ const AboutMe = () => {
       title: 'IdeaChronicler',
       description: "The 'Idea Chronicler' project is a fully functional blog application that enables users to view and interact with posts by leaving comments and liking content. It serves as a platform for users to share ideas and engage in discussions through written content.",
       date: 'August 2023',
-      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'JavaScript', 'Stimulus', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Devise', 'API'],
+      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'JavaScript', 'Stimulus', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Devise', 'API', 'Stimulus'],
       links: [
         { text: 'Source Code', url: 'https://github.com/romans-adi/IdeaChronicler' },
         { text: 'Live Demo', url: 'https://idea-chronicler.onrender.com/' },
@@ -133,7 +133,7 @@ const AboutMe = () => {
       title: 'Ultimate Recipe Assistant',
       description: 'Ultimate Recipe Assistant is a cooking app with user authentication and authorization, featuring models like User, Food, Recipe, and Recipe Food, complete with data validations, CRUD actions, and optimized queries to simplify kitchen adventures.',
       date: 'September 2023',
-      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Devise'],
+      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Devise', 'Stimulus'],
       links: [
         { text: 'Source Code', url: 'https://github.com/romans-adi/recipe-app' },
         { text: 'Live Demo', url: 'https://ultimate-recipe-assistant.onrender.com/' },
@@ -145,7 +145,7 @@ const AboutMe = () => {
       title: 'Finans Flux',
       description: 'FinansFlux is a robust financial mobile application built on a Postgres database, fortified by Devise authentication for security. It empowers users with features like transaction categorization, real-time expense tracking, and intuitive category creation.',
       date: 'September 2023',
-      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Devise'],
+      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Devise', 'Stimulus'],
       links: [
         { text: 'Source Code', url: 'https://github.com/romans-adi/finans-flux' },
         { text: 'Live Demo', url: 'https://finans-flux.onrender.com/' },
