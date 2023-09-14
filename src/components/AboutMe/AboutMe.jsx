@@ -8,6 +8,16 @@ import {
 } from 'devicons-react';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import lolDraftImage from '../../../public/screenshots/lol-draft-2023.png';
+import scores from '../../../public/screenshots/513-scores.png';
+import weather from '../../../public/screenshots/538-weather.png';
+import bookstore from '../../../public/screenshots/bookstore.png';
+import chronicler from '../../../public/screenshots/idea-chronicler.png';
+import library from '../../../public/screenshots/school-library.png';
+import spaceTravelers from '../../../public/screenshots/space-travelers-hub.png';
+import tvHub from '../../../public/screenshots/tv-series-hub.png';
+import recipe from '../../../public/screenshots/ultimate-recipe-assistant.png';
+import finansFlux from '../../../public/screenshots/finans-flux.png';
+
 import './AboutMe.scss';
 
 const AboutMe = () => {
@@ -45,6 +55,7 @@ const AboutMe = () => {
         { text: 'Source Code', url: 'https://github.com/romans-adi/bookstore' },
         { text: 'Live Demo', url: 'https://bookstore-cms-owyj.onrender.com/' },
       ],
+      screenshot: bookstore,
     },
     {
       id: uuidv4(),
@@ -56,6 +67,7 @@ const AboutMe = () => {
         { text: 'Source Code', url: 'https://github.com/romans-adi/538-weather' },
         { text: 'Live Demo', url: 'https://five38-weather.onrender.com/' },
       ],
+      screenshot: weather,
     },
     {
       id: uuidv4(),
@@ -67,6 +79,7 @@ const AboutMe = () => {
         { text: 'Source Code', url: 'https://github.com/romans-adi/tv-series-hub' },
         { text: 'Live Demo', url: 'https://alvaroiporre.github.io/JavaScript-Capstone-Project/' },
       ],
+      screenshot: tvHub,
     },
     {
       id: uuidv4(),
@@ -78,6 +91,7 @@ const AboutMe = () => {
         { text: 'Source Code', url: 'https://github.com/romans-adi/space-travelers-hub' },
         { text: 'Live Demo', url: 'https://space-travelers-hub-05ai.onrender.com/' },
       ],
+      screenshot: spaceTravelers,
     },
     {
       id: uuidv4(),
@@ -89,6 +103,7 @@ const AboutMe = () => {
         { text: 'Source Code', url: 'https://github.com/romans-adi/513-scores' },
         { text: 'Live Demo', url: 'https://five13-scores.onrender.com/' },
       ],
+      screenshot: scores,
     },
     {
       id: uuidv4(),
@@ -99,6 +114,7 @@ const AboutMe = () => {
       links: [
         { text: 'Source Code', url: 'https://github.com/romans-adi/school-library' },
       ],
+      screenshot: library,
     },
     {
       id: uuidv4(),
@@ -109,17 +125,31 @@ const AboutMe = () => {
       links: [
         { text: 'Source Code', url: 'https://github.com/romans-adi/IdeaChronicler' },
       ],
+      screenshot: chronicler,
     },
     {
       id: uuidv4(),
       title: 'Ultimate Recipe Assistant',
       description: 'Ultimate Recipe Assistant is a cooking app with user authentication and authorization, featuring models like User, Food, Recipe, and Recipe Food, complete with data validations, CRUD actions, and optimized queries to simplify kitchen adventures.',
       date: 'September 2023',
-      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Devise'],
+      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Devise'],
       links: [
         { text: 'Source Code', url: 'https://github.com/romans-adi/recipe-app' },
         { text: 'Live Demo', url: 'https://ultimate-recipe-assistant.onrender.com/' },
       ],
+      screenshot: recipe,
+    },
+    {
+      id: uuidv4(),
+      title: 'Finans Flux',
+      description: 'FinansFlux is a robust financial mobile application built on a Postgres database, fortified by Devise authentication for security. It empowers users with features like transaction categorization, real-time expense tracking, and intuitive category creation.',
+      date: 'September 2023',
+      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Devise'],
+      links: [
+        { text: 'Source Code', url: 'https://github.com/romans-adi/finans-flux' },
+        { text: 'Live Demo', url: 'https://finans-flux.onrender.com/' },
+      ],
+      screenshot: finansFlux,
     },
   ];
 
