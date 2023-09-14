@@ -124,6 +124,7 @@ const AboutMe = () => {
       technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'JavaScript', 'Stimulus', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Devise', 'API'],
       links: [
         { text: 'Source Code', url: 'https://github.com/romans-adi/IdeaChronicler' },
+        { text: 'Live Demo', url: 'https://idea-chronicler.onrender.com/' },
       ],
       screenshot: chronicler,
     },
