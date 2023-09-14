@@ -10,7 +10,7 @@ import ProjectCard from '../ProjectCard/ProjectCard';
 import lolDraftImage from '../../../public/screenshots/lol-draft-2023.png';
 import scores from '../../../public/screenshots/513-scores.png';
 import weather from '../../../public/screenshots/538-weather.png';
-import bookstore from '../../../public/screenshots/bookstore.png';
+import bookstore from '../../../public/screenshots/bookstore-cms.png';
 import chronicler from '../../../public/screenshots/idea-chronicler.png';
 import library from '../../../public/screenshots/school-library.png';
 import spaceTravelers from '../../../public/screenshots/space-travelers-hub.png';
