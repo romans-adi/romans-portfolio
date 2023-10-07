@@ -167,7 +167,7 @@ const AboutMe = () => {
         </p>
       ),
       date: 'October 2023',
-      technologies: ['MVC', 'Ruby on Rails', 'React', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Jest', 'Devise'],
+      technologies: ['MVC', 'Ruby on Rails', 'React', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Jest', 'Devise', 'REST API'],
       links: [
         { text: 'Source Code', url: 'https://github.com/romans-adi/travel-booking-frontend' },
         { text: 'Live Demo', url: 'https://traveli.onrender.com/' },
