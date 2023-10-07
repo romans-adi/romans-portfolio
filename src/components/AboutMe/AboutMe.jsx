@@ -17,6 +17,7 @@ import spaceTravelers from '../../../public/screenshots/space-travelers-hub.png'
 import tvHub from '../../../public/screenshots/tv-series-hub.png';
 import recipe from '../../../public/screenshots/ultimate-recipe-assistant.png';
 import finansFlux from '../../../public/screenshots/finans-flux.png';
+import traveliBooking from '../../../public/screenshots/traveli-booking.png';
 
 import './AboutMe.scss';
 
@@ -151,6 +152,27 @@ const AboutMe = () => {
         { text: 'Live Demo', url: 'https://finans-flux.onrender.com/' },
       ],
       screenshot: finansFlux,
+    },
+    {
+      id: uuidv4(),
+      title: 'Traveli Booking',
+      description: (
+        <p>
+          Traveli Booking is a user-friendly travel planning and booking platform that was developed on behalf of my
+          {' '}
+          <a className="person-link" href="https://github.com/carreraprogrammer" target="_blank" rel="noopener noreferrer">
+            study partner
+          </a>
+          . This project seamlessly integrates cutting-edge technologies, utilizing React Router for smooth navigation, Redux for efficient state management, and Redux Toolkit&apos;s createAsyncThunk for real-time data fetching. With a responsive design, secure user authentication, and robust backend support, Traveli simplifies travel planning and booking, making it a delightful experience for users. This project was a collaborative effort, showcasing our teamwork and technical skills in delivering a top-notch user experience.
+        </p>
+      ),
+      date: 'October 2023',
+      technologies: ['MVC', 'Ruby on Rails', 'React', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Jest', 'Devise'],
+      links: [
+        { text: 'Source Code', url: 'https://github.com/romans-adi/travel-booking-frontend' },
+        { text: 'Live Demo', url: 'https://traveli.onrender.com/' },
+      ],
+      screenshot: traveliBooking,
     },
   ];
 
