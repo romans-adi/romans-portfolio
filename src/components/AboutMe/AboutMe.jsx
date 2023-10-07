@@ -163,7 +163,7 @@ const AboutMe = () => {
           <a className="person-link" href="https://github.com/carreraprogrammer" target="_blank" rel="noopener noreferrer">
             study partner
           </a>
-          . This project seamlessly integrates cutting-edge technologies, utilizing React Router for smooth navigation, Redux for efficient state management, and Redux Toolkit&apos;s createAsyncThunk for real-time data fetching. With a responsive design, secure user authentication, and robust backend support, Traveli simplifies travel planning and booking, making it a delightful experience for users. This project was a collaborative effort, showcasing our teamwork and technical skills in delivering a top-notch user experience.
+          . This project seamlessly integrates React Router, Redux, and Redux Toolkit&apos;s createAsyncThunk for real-time data. It offers a responsive design, secure authentication, and robust backend support, ensuring a seamless travel planning experience.
         </p>
       ),
       date: 'October 2023',
