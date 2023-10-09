@@ -317,8 +317,7 @@ const AboutMe = () => {
               I trained at Microverse, a well-known online coding school, where I gained a strong foundation in software development principles by collaborating with diverse developers and have successfully executed projects that demonstrate my ability to create high-quality web solutions with engaging user experiences and efficient backend functionalities.
               <br />
               <br />
-              Actively seeking new software engineering opportunities, I&apos;m dedicated, adaptable, and eager to discuss how I can contribute my skills to your team.
-              Let&apos;s connect and explore the possibilities of collaborating together to achieve exceptional results!
+              I am actively pursuing new software engineering opportunities and bring a strong commitment, adaptability, and a desire to discuss how my skills can enhance your team. I invite you to connect so that we can explore the potential for collaboration, ultimately achieving outstanding results together.
             </Typography>
           </div>
           <div className="project-cards">
