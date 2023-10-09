@@ -190,22 +190,31 @@ const AboutMe = () => {
       <div className="two-column-container">
         <div className="left-column">
           <div className="description">
-            <Typography variant="h3" className="name">
+            <Typography
+              variant="h3"
+              className={`name ${openToWork ? 'mailto-link' : ''}`}
+              onClick={() => {
+                if (openToWork) {
+                  window.location.href = 'mailto:romans.spilaks@gmail.com';
+                }
+              }}
+            >
               Romans Špiļaks
               {openToWork && (
-                <span
-                  className={`status-badge ${hovered ? 'hovered' : ''}`}
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  {hovered ? (
-                    <a href="mailto:romans.spilaks@gmail.com">
-                      <MailOutlineIcon fontSize="medium" />
-                    </a>
-                  ) : 'Open To Work'}
-                </span>
+              <span
+                className={`status-badge ${hovered ? 'hovered' : ''}`}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                {hovered ? (
+                  <a href="mailto:romans.spilaks@gmail.com">
+                    <MailOutlineIcon fontSize="medium" />
+                  </a>
+                ) : 'Open To Work'}
+              </span>
               )}
             </Typography>
+
             <Typography variant="h6" className="position">
               Full Stack Software Engineer
             </Typography>
