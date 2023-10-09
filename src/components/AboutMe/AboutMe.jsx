@@ -200,7 +200,7 @@ const AboutMe = () => {
                 >
                   {hovered ? (
                     <a href="mailto:romans.spilaks@gmail.com">
-                      <MailOutlineIcon fontSize="small" />
+                      <MailOutlineIcon fontSize="medium" />
                     </a>
                   ) : 'Open To Work'}
                 </span>

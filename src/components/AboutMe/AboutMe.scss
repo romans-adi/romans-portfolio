@@ -38,7 +38,9 @@
       justify-content: space-between;
 
       .status-badge {
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-family: 'Outfit', sans-serif;
         font-weight: 500;
         margin:  1rem 0 1rem;
@@ -54,6 +56,7 @@
         transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s, background-color 0.5s ease-in-out;
         text-align: center;
         width: 100px;
+        height: 50px;
 
         &::before {
           content: "";
