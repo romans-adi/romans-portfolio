@@ -6,6 +6,7 @@ import { FaGithub, FaLinkedin, FaAngellist } from 'react-icons/fa';
 import {
   Html5Original, Css3Original, SassOriginal, TailwindcssPlain, BootstrapOriginal, LessPlainWordmark, JavascriptOriginal, ReactOriginalWordmark, VuejsOriginal, ReduxOriginal, RubyOriginal, RspecOriginal, RailsPlainWordmark, PhpPlain, COriginal, FedoraPlain, FigmaOriginal, JqueryPlain, EslintOriginal, PostgresqlOriginal, MysqlOriginalWordmark, GulpPlain, NpmOriginalWordmark, GitOriginal,
 } from 'devicons-react';
+import ContactModal from '../Contact/ContactModal';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import lolDraftImage from '../../../public/screenshots/lol-draft-2023.png';
 import scores from '../../../public/screenshots/513-scores.png';
@@ -22,7 +23,8 @@ import traveliBooking from '../../../public/screenshots/traveli-booking.png';
 import './AboutMe.scss';
 
 const AboutMe = () => {
-  const openToWork = true;
+  const [openToWork] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
   const [hovered, setHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -31,6 +33,16 @@ const AboutMe = () => {
 
   const handleMouseLeave = () => {
     setHovered(false);
+  };
+
+  const openModal = () => {
+    if (openToWork) {
+      setModalOpen(true);
+    }
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
   };
 
   const projects = [
@@ -122,7 +134,7 @@ const AboutMe = () => {
       title: 'IdeaChronicler',
       description: "The 'Idea Chronicler' project is a fully functional blog application that enables users to view and interact with posts by leaving comments and liking content. It serves as a platform for users to share ideas and engage in discussions through written content.",
       date: 'August 2023',
-      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'JavaScript', 'Stimulus', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Devise', 'API', 'Stimulus'],
+      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'JavaScript', 'Stimulus', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Devise', 'API'],
       links: [
         { text: 'Source Code', url: 'https://github.com/romans-adi/IdeaChronicler' },
         { text: 'Live Demo', url: 'https://idea-chronicler.onrender.com/' },
@@ -156,16 +168,7 @@ const AboutMe = () => {
     {
       id: uuidv4(),
       title: 'Traveli Booking',
-      description: (
-        <p>
-          Traveli Booking is a user-friendly travel planning and booking platform that was developed on behalf of my
-          {' '}
-          <a className="person-link" href="https://github.com/carreraprogrammer" target="_blank" rel="noopener noreferrer">
-            study partner
-          </a>
-          . This project seamlessly integrates React Router, Redux, and Redux Toolkit&apos;s createAsyncThunk for real-time data. It offers a responsive design, secure authentication, and robust backend support, ensuring a seamless travel planning experience.
-        </p>
-      ),
+      description: 'Traveli Booking is a user-friendly travel planning and booking platform that was developed on behalf of my study partner. This project seamlessly integrates React Router, Redux, and Redux Toolkit&apos;s createAsyncThunk for real-time data. It offers a responsive design, secure authentication, and robust backend support, ensuring a seamless travel planning experience.',
       date: 'October 2023',
       technologies: ['MVC', 'Ruby on Rails', 'React', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Jest', 'Devise', 'REST API'],
       links: [
@@ -193,11 +196,7 @@ const AboutMe = () => {
             <Typography
               variant="h3"
               className={`name ${openToWork ? 'mailto-link' : ''}`}
-              onClick={() => {
-                if (openToWork) {
-                  window.location.href = 'mailto:romans.spilaks@gmail.com';
-                }
-              }}
+              onClick={openModal}
             >
               Romans Špiļaks
               {openToWork && (
@@ -207,14 +206,12 @@ const AboutMe = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 {hovered ? (
-                  <a href="mailto:romans.spilaks@gmail.com">
-                    <MailOutlineIcon fontSize="medium" />
-                  </a>
+                  <MailOutlineIcon fontSize="medium" />
                 ) : 'Open To Work'}
               </span>
               )}
             </Typography>
-
+            <ContactModal isOpen={modalOpen} onRequestClose={closeModal} />
             <Typography variant="h6" className="position">
               Full Stack Software Engineer
             </Typography>

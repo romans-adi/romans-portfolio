@@ -1,0 +1,110 @@
+#contact-form {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 500px;
+  flex: 1;
+  color: #fff;
+  text-align: left;
+  width: 90%;
+
+#email {
+  font-size: 1.2rem;
+  padding: 0.6rem 0.3rem;
+}
+
+textarea {
+  font-size: 1rem;
+  padding: 0.6rem;
+}
+
+  label {
+    font-weight: 600;
+
+  }
+
+.contact-submit {
+  z-index: 40;
+  padding: 0.5rem 0.7rem;
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  background-color: #81b8ae;
+  color: #10352f;
+  border: #10352f 0.3px solid;
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+  border-radius: 5%;
+  text-transform: uppercase;
+  font-weight: 600;
+
+
+  &:hover {
+    background-color: #fff;
+    color: #1b917d;
+  }
+}
+}
+
+.ReactModal__Overlay--after-open {
+  background-color: transparent !important;
+}
+
+#contact-modal {
+  display: flex;
+  margin: 10rem auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #182338 !important;
+  z-index: 40;
+  opacity: 1;
+  inset: 0 !important;
+  max-width: 500px;
+  border: 2px solid #1b917d !important;
+
+  .modal-content,
+  .modal-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .close-modal {
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+.submit-success-message {
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.short-horizontal-rule {
+  width: 10%;
+  border: 1px solid #1b917d;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
