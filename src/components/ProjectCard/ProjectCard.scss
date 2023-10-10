@@ -14,7 +14,7 @@
     background-position: center;
     background-repeat: no-repeat;
     padding: 1rem;
-    height: 400px;
+    height: 600px;
     transition: all 2s ease-in-out;
 
     .screenshot {
@@ -78,6 +78,9 @@
       .project-description {
         flex: 1;
         margin-bottom: 0.5rem;
+        justify-content: center;
+        display: flex;
+        align-items: center;
       }
 
       .project-footer {
