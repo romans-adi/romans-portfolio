@@ -14,7 +14,7 @@
     background-position: center;
     background-repeat: no-repeat;
     padding: 1rem;
-    height: 600px;
+    height: 700px;
     transition: all 2s ease-in-out;
 
     .screenshot {
@@ -43,7 +43,6 @@
     &:hover {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       background-color: #081225;
-      cursor: pointer;
       border: #47b8a5 0.2px solid;
       background-size: 100%;
       transform: scale(1.02);
@@ -73,14 +72,12 @@
         margin-top: 1rem;
         font-size: 1.2rem;
         font-weight: 500;
+        pointer-events: none;
       }
 
       .project-description {
         flex: 1;
         margin-bottom: 0.5rem;
-        justify-content: center;
-        display: flex;
-        align-items: center;
       }
 
       .project-footer {
@@ -105,6 +102,7 @@
               background-color: #10352f;
               color: #47b8a5;
               border: #327d71 0.3px solid;
+              pointer-events: none;
             }
 
             &.link-badge {

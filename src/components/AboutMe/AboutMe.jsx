@@ -156,7 +156,7 @@ const AboutMe = () => {
     {
       id: uuidv4(),
       title: 'Traveli Booking',
-      description: 'Traveli Booking is a user-friendly travel planning and booking platform that was developed on behalf of my study partner. This project seamlessly integrates React Router, Redux, and Redux Toolkit&apos;s createAsyncThunk for real-time data. It offers a responsive design, secure authentication, and robust backend support, ensuring a seamless travel planning experience.',
+      description: 'Traveli Booking is a user-friendly travel planning and booking platform that was developed on behalf of my study partner. This project seamlessly integrates React Router, Redux, and Redux Toolkit\'s createAsyncThunk for real-time data. It offers a responsive design, secure authentication, and robust backend support, ensuring a seamless travel planning experience.',
       date: 'October 2023',
       technologies: ['MVC', 'Ruby on Rails', 'React', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Jest', 'Devise', 'REST API'],
       links: [
