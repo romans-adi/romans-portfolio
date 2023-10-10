@@ -108,3 +108,9 @@ textarea {
   margin: 0 auto;
   margin-top: 2rem;
 }
+
+@media (max-width: 796px) {
+#contact-modal {
+max-width: 90%;
+}
+}
