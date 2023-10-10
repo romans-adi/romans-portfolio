@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useForm, ValidationError } from '@formspree/react';
-import { FaHandshake } from 'react-icons/fa';
+import { FaHandshake, FaHandPointer } from 'react-icons/fa';
 import './Contact.scss';
 
 function ContactForm({ onSubmit }) {
@@ -31,14 +31,21 @@ function ContactForm({ onSubmit }) {
 
   return (
     <form id="contact-form" onSubmit={handleFormSubmit}>
-      <label htmlFor="email">Your email:</label>
-      <input id="email" type="email" name="email" />
-      <ValidationError prefix="Email" field="email" errors={state.errors} />
-
-      <label htmlFor="message">Your Message:</label>
-      <textarea rows={6} id="message" name="message" />
-      <ValidationError prefix="Message" field="message" errors={state.errors} />
-
+      <h3 className="contact-support-text">
+        Please feel free to get in touch
+        {' '}
+        <FaHandPointer style={{ color: '#1b917d', fontSize: '1.8rem', transform: 'rotate(230deg) translateY(-137px) translateX(56px)' }} />
+      </h3>
+      <div className="form-item">
+        <label htmlFor="email">Your email:</label>
+        <input id="email" type="email" name="email" />
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
+      </div>
+      <div className="form-item">
+        <label htmlFor="message">Your Message:</label>
+        <textarea rows={10} id="message" name="message" />
+        <ValidationError prefix="Message" field="message" errors={state.errors} />
+      </div>
       <button className="contact-submit" type="submit" disabled={state.submitting}>
         Submit
       </button>

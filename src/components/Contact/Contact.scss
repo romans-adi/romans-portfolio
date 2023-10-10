@@ -2,14 +2,24 @@
   background-color: transparent;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 1rem;
   max-width: 500px;
   flex: 1;
   color: #fff;
   text-align: left;
-  width: 90%;
+  width: 100%;
+  flex:1;
 
+.contact-support-text {
+  line-height: 1.6;
+  width: 100%;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 #email {
   font-size: 1.2rem;
   padding: 0.6rem 0.3rem;
@@ -22,8 +32,8 @@ textarea {
 
   label {
     font-weight: 600;
-
   }
+}
 
 .contact-submit {
   z-index: 40;
@@ -74,6 +84,7 @@ textarea {
     justify-content: center;
     margin: 0 auto;
     width: 90%;
+    flex:1;
   }
 
   .close-modal {
