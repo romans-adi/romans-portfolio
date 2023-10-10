@@ -13,7 +13,6 @@ import scores from '../../../public/screenshots/513-scores.png';
 import weather from '../../../public/screenshots/538-weather.png';
 import bookstore from '../../../public/screenshots/bookstore-cms.png';
 import chronicler from '../../../public/screenshots/idea-chronicler.png';
-import library from '../../../public/screenshots/school-library.png';
 import spaceTravelers from '../../../public/screenshots/space-travelers-hub.png';
 import tvHub from '../../../public/screenshots/tv-series-hub.png';
 import recipe from '../../../public/screenshots/ultimate-recipe-assistant.png';
@@ -117,17 +116,6 @@ const AboutMe = () => {
         { text: 'Live Demo', url: 'https://five13-scores.onrender.com/' },
       ],
       screenshot: scores,
-    },
-    {
-      id: uuidv4(),
-      title: 'School Library Management System',
-      description: 'The School Library App is a console-based application that facilitates tasks like listing books and people, creating rentals, and managing library resources. It follows object-oriented principles and employs the decorator pattern to enhance flexibility and user interaction.',
-      date: 'August 2023',
-      technologies: ['Ruby', 'RSpec', 'PostgreSQL'],
-      links: [
-        { text: 'Source Code', url: 'https://github.com/romans-adi/school-library' },
-      ],
-      screenshot: library,
     },
     {
       id: uuidv4(),

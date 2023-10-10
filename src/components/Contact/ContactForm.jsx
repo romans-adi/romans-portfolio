@@ -34,7 +34,7 @@ function ContactForm({ onSubmit }) {
       <h3 className="contact-support-text">
         Please feel free to get in touch
         {' '}
-        <FaHandPointer style={{ color: '#1b917d', fontSize: '1.8rem', transform: 'rotate(230deg) translateY(-137px) translateX(56px)' }} />
+        <FaHandPointer className="hand-pointer" />
       </h3>
       <div className="form-item">
         <label htmlFor="email">Your email:</label>

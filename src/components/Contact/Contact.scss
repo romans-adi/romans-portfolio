@@ -14,7 +14,6 @@
 .contact-support-text {
   line-height: 1.6;
   width: 100%;
-  text-align: right;
 }
 
 .form-item {
@@ -119,6 +118,18 @@ textarea {
   border: 1px solid #1b917d;
   margin: 0 auto;
   margin-top: 2rem;
+}
+
+.hand-pointer {
+    color: #81b8ae;
+    font-size: 2rem;
+    transform: rotate(200deg) translateY(-10px) translateX(-20px);
+    opacity: 0.3;
+    transition: opacity 3s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
 }
 
 @media (max-width: 796px) {
