@@ -274,7 +274,7 @@
 
 @media (max-width: 796px) {
   .about-me-container {
-      overflow: hidden;
+    overflow: hidden;
 
     .two-column-container {
       flex-direction: column;
@@ -286,14 +286,18 @@
       padding: 0.2rem 2rem;
       padding-left: 1rem;
 
-      .tools .tool-list {
-        gap: 3rem;
-        justify-content: space-around;
+      .tools {
+        padding: 2rem 0 1rem;
 
-        .tool-icon {
-          width: 5% !important;
-          height: 5% !important;
-          filter: grayscale(0);
+        .tool-list {
+          gap: 3rem;
+          justify-content: space-around;
+
+          .tool-icon {
+            width: 5% !important;
+            height: 5% !important;
+            filter: grayscale(0);
+          }
         }
       }
 
