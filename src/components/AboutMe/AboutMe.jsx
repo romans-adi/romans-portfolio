@@ -183,15 +183,22 @@ const AboutMe = () => {
           <div className="description">
             <Typography
               variant="h3"
-              className={`name ${openToWork ? 'mailto-link' : ''}`}
-              onClick={openModal}
+              className="name"
             >
               Romans Špiļaks
               {openToWork && (
               <span
                 className={`status-badge ${hovered ? 'hovered' : ''}`}
                 onMouseEnter={handleMouseEnter}
+                onClick={openModal}
                 onMouseLeave={handleMouseLeave}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter') {
+                    openModal();
+                  }
+                }}
               >
                 {hovered ? (
                   <MailOutlineIcon fontSize="medium" />

@@ -35,6 +35,13 @@ const ProjectCard = ({
         <Typography variant="body1" className="project-description">
           {description}
         </Typography>
+        {screenshot && (
+          <img
+            src={screenshot}
+            alt={`${title} Screenshot`}
+            className="project-screenshot-inner"
+          />
+        )}
         <div className="project-footer">
           <div className="technologies">
             {technologies.map((tech) => (
