@@ -287,14 +287,14 @@ const AboutMe = () => {
               </div>
             </div>
           </div>
-          <div className="network-icons-container">
+          <div id="contact" className="network-icons-container">
             <a href="mailto:romans.spilaks@gmail.com" rel="noopener noreferrer" className="network-icon-link">
               <MailOutlineIcon className="network-icon" />
             </a>
             <a href="https://github.com/romans-adi" target="_blank" rel="noopener noreferrer" className="network-icon-link">
               <FaGithub className="network-icon" />
             </a>
-            <a href="https://www.linkedin.com/in/obj513/" target="_blank" rel="noopener noreferrer" className="network-icon-link">
+            <a href="www.linkedin.com/in/romansspilaks" target="_blank" rel="noopener noreferrer" className="network-icon-link">
               <FaLinkedin className="network-icon" />
             </a>
             <a href="https://wellfound.com/u/romans-spilaks" target="_blank" rel="noopener noreferrer" className="network-icon-link">
@@ -327,7 +327,8 @@ const AboutMe = () => {
               <br />
               I am actively pursuing new software engineering opportunities and bring a strong commitment, adaptability, and a desire to discuss how my skills can enhance your team.
               {' '}
-              <span
+              <a
+                href="#contact"
                 className="highlight-container"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -337,7 +338,7 @@ const AboutMe = () => {
                 >
                   I invite you
                 </span>
-              </span>
+              </a>
               {' '}
               to connect so that we can explore the potential for collaboration, ultimately achieving outstanding results together.
             </Typography>
