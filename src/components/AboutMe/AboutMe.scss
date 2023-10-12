@@ -274,6 +274,8 @@
 
 @media (max-width: 796px) {
   .about-me-container {
+      overflow: hidden;
+
     .two-column-container {
       flex-direction: column;
     }
@@ -281,7 +283,7 @@
     .left-column {
       width: 100%;
       flex-flow: column-reverse;
-      padding: 0.5rem 3rem;
+      padding: 0.2rem 2rem;
       padding-left: 1rem;
 
       .tools .tool-list {
@@ -330,11 +332,5 @@
         padding: 1rem;
       }
     }
-  }
-}
-
-@media (max-width: 320px) {
-  .two-column-container {
-    padding-top: 5rem;
   }
 }
