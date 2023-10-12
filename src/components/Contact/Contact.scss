@@ -9,54 +9,52 @@
   color: #fff;
   text-align: left;
   width: 100%;
-  flex:1;
 
-.contact-support-text {
-  line-height: 1.6;
-  width: 100%;
-}
+  .contact-support-text {
+    line-height: 1.6;
+    width: 100%;
+  }
 
-.form-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-#email {
-  font-size: 1.2rem;
-  padding: 0.6rem 0.3rem;
-}
+  .form-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-textarea {
-  font-size: 1rem;
-  padding: 0.6rem;
-}
+    #email {
+      font-size: 1.2rem;
+      padding: 0.6rem 0.3rem;
+    }
 
-  label {
+    textarea {
+      font-size: 1rem;
+      padding: 0.6rem;
+    }
+
+    label {
+      font-weight: 600;
+    }
+  }
+
+  .contact-submit {
+    z-index: 40;
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    background-color: #81b8ae;
+    color: #10352f;
+    border: #10352f 0.3px solid;
+    cursor: pointer;
+    transition: 0.2s all ease-in;
+    border-radius: 5%;
+    text-transform: uppercase;
     font-weight: 600;
+
+    &:hover {
+      background-color: #fff;
+      color: #1b917d;
+    }
   }
-}
-
-.contact-submit {
-  z-index: 40;
-  padding: 0.5rem 0.7rem;
-  font-size: 1rem;
-  text-decoration: none;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 500;
-  background-color: #81b8ae;
-  color: #10352f;
-  border: #10352f 0.3px solid;
-  cursor: pointer;
-  transition: 0.2s all ease-in;
-  border-radius: 5%;
-  text-transform: uppercase;
-  font-weight: 600;
-
-
-  &:hover {
-    background-color: #fff;
-    color: #1b917d;
-  }
-}
 }
 
 .ReactModal__Overlay--after-open {
@@ -84,7 +82,7 @@ textarea {
     justify-content: center;
     margin: 0 auto;
     width: 90%;
-    flex:1;
+    flex: 1;
   }
 
   .close-modal {
@@ -121,19 +119,19 @@ textarea {
 }
 
 .hand-pointer {
-    color: #81b8ae;
-    font-size: 2rem;
-    transform: rotate(200deg) translateY(-10px) translateX(-20px);
-    opacity: 0.3;
-    transition: opacity 3s ease-in-out;
+  color: #81b8ae;
+  font-size: 2rem;
+  transform: rotate(200deg) translateY(-10px) translateX(-20px);
+  opacity: 0.3;
+  transition: opacity 3s ease-in-out;
 
-    &:hover {
-      opacity: 0.8;
-    }
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 @media (max-width: 796px) {
-#contact-modal {
-max-width: 90%;
-}
+  #contact-modal {
+    max-width: 90%;
+  }
 }
