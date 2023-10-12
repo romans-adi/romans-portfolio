@@ -234,6 +234,8 @@
     /* stylelint-disable-next-line csstree/validator, unit-no-unknown  */
     max-height: 100svh;
     max-height: 100vh;
+    direction: rtl;
+    text-align: left;
     overflow-y: scroll;
     padding-left: 2rem;
     border-left: 1px solid #327d71;
@@ -270,7 +272,7 @@
     .left-column {
       width: 100%;
       flex-flow: column-reverse;
-      padding: 3rem;
+      padding: 0.5rem 3rem;
       padding-left: 1rem;
 
       .tools .tool-list {
@@ -304,6 +306,7 @@
 
       .text-container {
         width: 100%;
+        text-align: left;
         margin-left: 0;
         padding: 1rem;
       }
