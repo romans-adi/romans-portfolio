@@ -212,6 +212,12 @@
 
   .highlight-container {
     display: inline-block;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: none;
+    border: none;
 
     &::before {
       content: " ";

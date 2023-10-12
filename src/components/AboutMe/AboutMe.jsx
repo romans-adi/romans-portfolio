@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Typography, Paper } from '@mui/material';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { v4 as uuidv4 } from 'uuid';
@@ -25,6 +25,7 @@ const AboutMe = () => {
   const [openToWork] = useState(true);
   const [modalOpen, setModalOpen] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const contactRef = useRef(null);
 
   const handleMouseEnter = () => {
     setHovered(true);
@@ -42,6 +43,10 @@ const AboutMe = () => {
 
   const closeModal = () => {
     setModalOpen(false);
+  };
+
+  const handleClickOrKeyPress = () => {
+    contactRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   const projects = [
@@ -287,7 +292,7 @@ const AboutMe = () => {
               </div>
             </div>
           </div>
-          <div id="contact" className="network-icons-container">
+          <div id="contact" ref={contactRef} className="network-icons-container">
             <a href="mailto:romans.spilaks@gmail.com" rel="noopener noreferrer" className="network-icon-link">
               <MailOutlineIcon className="network-icon" />
             </a>
@@ -327,8 +332,15 @@ const AboutMe = () => {
               <br />
               I am actively pursuing new software engineering opportunities and bring a strong commitment, adaptability, and a desire to discuss how my skills can enhance your team.
               {' '}
-              <a
-                href="#contact"
+              <button
+                type="button"
+                tabIndex={0}
+                onClick={handleClickOrKeyPress}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    handleClickOrKeyPress();
+                  }
+                }}
                 className="highlight-container"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -338,7 +350,7 @@ const AboutMe = () => {
                 >
                   I invite you
                 </span>
-              </a>
+              </button>
               {' '}
               to connect so that we can explore the potential for collaboration, ultimately achieving outstanding results together.
             </Typography>
