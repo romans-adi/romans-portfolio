@@ -288,6 +288,9 @@ const AboutMe = () => {
             </div>
           </div>
           <div className="network-icons-container">
+            <a href="mailto:romans.spilaks@gmail.com" rel="noopener noreferrer" className="network-icon-link">
+              <MailOutlineIcon className="network-icon" />
+            </a>
             <a href="https://github.com/romans-adi" target="_blank" rel="noopener noreferrer" className="network-icon-link">
               <FaGithub className="network-icon" />
             </a>
@@ -302,7 +305,7 @@ const AboutMe = () => {
         <div className="right-column">
           <div className="text-container">
             <Typography variant="body1" className="content">
-              I&apos;m a versatile software developer experienced in UI/UX design and proficient in HTML, CSS, JavaScript (including
+              I&apos;m Romans, a versatile software developer experienced in UI/UX design and proficient in HTML, CSS, JavaScript (including
               {' '}
               <strong>React</strong>
               {' '}
@@ -315,10 +318,28 @@ const AboutMe = () => {
               , and I&apos;m excited to apply my knowledge. I&apos;m passionate about solving problems and finding innovative solutions.
               <br />
               <br />
-              I trained at Microverse, a well-known online coding school, where I gained a strong foundation in software development principles by collaborating with diverse developers and have successfully executed projects that demonstrate my ability to create high-quality web solutions with engaging user experiences and efficient backend functionalities.
+              I&apos;ve hitchhiked almost the same number of kilometers as the hours I&apos;ve spent coding, emphasizing the balance I strive to maintain in life.
               <br />
               <br />
-              I am actively pursuing new software engineering opportunities and bring a strong commitment, adaptability, and a desire to discuss how my skills can enhance your team. I invite you to connect so that we can explore the potential for collaboration, ultimately achieving outstanding results together.
+              I trained at Microverse, online coding school, where I gained a strong foundation in software development principles by collaborating with diverse developers and have successfully executed projects that demonstrate my ability to create high-quality web solutions with engaging user experiences and efficient backend functionalities.
+              {' '}
+              <br />
+              <br />
+              I am actively pursuing new software engineering opportunities and bring a strong commitment, adaptability, and a desire to discuss how my skills can enhance your team.
+              {' '}
+              <span
+                className="highlight-container"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <span
+                  className="highlight"
+                >
+                  I invite you
+                </span>
+              </span>
+              {' '}
+              to connect so that we can explore the potential for collaboration, ultimately achieving outstanding results together.
             </Typography>
           </div>
           <div className="project-cards">
