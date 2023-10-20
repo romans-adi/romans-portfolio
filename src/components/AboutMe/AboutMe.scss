@@ -289,8 +289,9 @@
 
     .left-column {
       width: 100%;
+      overflow-y: auto;
       flex-flow: column-reverse;
-      padding: 0.2rem 2rem;
+      padding: 0.2rem 4rem;
       padding-left: 1rem;
 
       .tools {
@@ -323,17 +324,21 @@
     .right-column {
       width: 100%;
       border-left: none;
-      padding-left: 0;
-      padding-right: 0;
+      padding: 0;
+      margin: 0;
       direction: rtl;
       text-align: left;
 
       .text-container {
         width: 100%;
         text-align: left;
-        margin-left: 0;
-        padding: 1rem;
+        margin: 0 auto;
+        padding: 0 1rem;
         direction: ltr;
+
+        p {
+          margin: 0;
+        }
       }
 
       .technologies {

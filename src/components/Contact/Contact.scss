@@ -69,9 +69,11 @@
   align-items: center;
   background: #182338 !important;
   z-index: 40;
+  height: 100%;
+  max-height: 500px;
+  margin: auto;
   opacity: 1;
   inset: 0 !important;
-  max-width: 500px;
   border: 2px solid #1b917d !important;
 
   .modal-content,
@@ -82,7 +84,6 @@
     justify-content: center;
     margin: 0 auto;
     width: 90%;
-    flex: 1;
   }
 
   .close-modal {
@@ -91,6 +92,7 @@
     outline: none;
     border: none;
     color: #fff;
+
     font-weight: 600;
     position: absolute;
     right: 1rem;
@@ -132,6 +134,5 @@
 
 @media (max-width: 796px) {
   #contact-modal {
-    max-width: 90%;
   }
 }
