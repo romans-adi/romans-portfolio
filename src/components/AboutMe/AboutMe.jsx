@@ -3,6 +3,7 @@ import { Typography, Paper } from '@mui/material';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { v4 as uuidv4 } from 'uuid';
 import { FaGithub, FaLinkedin, FaAngellist } from 'react-icons/fa';
+import Velocity from 'velocity-animate';
 import {
   Html5Original, Css3Original, SassOriginal, TailwindcssPlain, BootstrapOriginal, LessPlainWordmark, JavascriptOriginal, ReactOriginalWordmark, VuejsOriginal, ReduxOriginal, RubyOriginal, RspecOriginal, RailsPlainWordmark, PhpPlain, COriginal, FedoraPlain, FigmaOriginal, JqueryPlain, EslintOriginal, PostgresqlOriginal, MysqlOriginalWordmark, GulpPlain, NpmOriginalWordmark, GitOriginal,
 } from 'devicons-react';
@@ -18,14 +19,39 @@ import tvHub from '../../../public/screenshots/tv-series-hub.png';
 import recipe from '../../../public/screenshots/ultimate-recipe-assistant.png';
 import finansFlux from '../../../public/screenshots/finans-flux.png';
 import traveliBooking from '../../../public/screenshots/traveli-booking.png';
-
 import './AboutMe.scss';
+import TypingComponent from './TypingComponent';
 
 const AboutMe = () => {
+  const [leftColumnOpen, setLeftColumnOpen] = useState(true);
   const [openToWork] = useState(true);
   const [modalOpen, setModalOpen] = useState(false);
   const [hovered, setHovered] = useState(false);
   const contactRef = useRef(null);
+  const elementRef = useRef(null);
+
+  const toggleLeftColumn = () => {
+    const element = elementRef.current;
+
+    if (leftColumnOpen) {
+      Velocity(element, 'slideUp', {
+        duration: 400,
+        easing: 'ease-in',
+        complete: () => {
+          setLeftColumnOpen(!leftColumnOpen);
+        },
+      });
+    } else {
+      Velocity(element, 'fadeIn', {
+        duration: 1000,
+        easing: 'ease-out',
+        complete: () => {
+          element.style.display = 'flex';
+          setLeftColumnOpen(!leftColumnOpen);
+        },
+      });
+    }
+  };
 
   const handleMouseEnter = () => {
     setHovered(true);
@@ -67,7 +93,7 @@ const AboutMe = () => {
       title: 'Bookstore CMS',
       description: 'The Bookstore project is a website that allows users to view, add, and remove books from a list. It utilizes React and Redux to provide an interactive user interface and manage the application state.',
       date: 'May 2023',
-      technologies: ['React', 'SCSS', 'Redux Toolkit'],
+      technologies: ['React', 'SCSS', 'Redux'],
       links: [
         { text: 'Source Code', url: 'https://github.com/romans-adi/bookstore' },
         { text: 'Live Demo', url: 'https://bookstore-cms-owyj.onrender.com/' },
@@ -127,7 +153,7 @@ const AboutMe = () => {
       title: 'IdeaChronicler',
       description: "The 'Idea Chronicler' project is a fully functional blog application that enables users to view and interact with posts by leaving comments and liking content. It serves as a platform for users to share ideas and engage in discussions through written content.",
       date: 'August 2023',
-      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'JavaScript', 'Stimulus', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Devise', 'API'],
+      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'JavaScript', 'Stimulus', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'API'],
       links: [
         { text: 'Source Code', url: 'https://github.com/romans-adi/IdeaChronicler' },
         { text: 'Live Demo', url: 'https://idea-chronicler.onrender.com/' },
@@ -139,7 +165,7 @@ const AboutMe = () => {
       title: 'Ultimate Recipe Assistant',
       description: 'Ultimate Recipe Assistant is a cooking app with user authentication and authorization, featuring models like User, Food, Recipe, and Recipe Food, complete with data validations, CRUD actions, and optimized queries to simplify kitchen adventures.',
       date: 'September 2023',
-      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Devise', 'Stimulus'],
+      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Stimulus'],
       links: [
         { text: 'Source Code', url: 'https://github.com/romans-adi/recipe-app' },
         { text: 'Live Demo', url: 'https://ultimate-recipe-assistant.onrender.com/' },
@@ -151,7 +177,7 @@ const AboutMe = () => {
       title: 'Finans Flux',
       description: 'FinansFlux is a robust financial mobile application built on a Postgres database, fortified by Devise authentication for security. It empowers users with features like transaction categorization, real-time expense tracking, and intuitive category creation.',
       date: 'September 2023',
-      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Devise', 'Stimulus'],
+      technologies: ['MVC', 'Ruby on Rails', 'Ruby', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Stimulus'],
       links: [
         { text: 'Source Code', url: 'https://github.com/romans-adi/finans-flux' },
         { text: 'Live Demo', url: 'https://finans-flux.onrender.com/' },
@@ -163,7 +189,7 @@ const AboutMe = () => {
       title: 'Traveli Booking',
       description: 'Traveli Booking is a user-friendly travel planning and booking platform that was developed on behalf of my study partner. This project seamlessly integrates React Router, Redux, and Redux Toolkit\'s createAsyncThunk for real-time data. It offers a responsive design, secure authentication, and robust backend support, ensuring a seamless travel planning experience.',
       date: 'October 2023',
-      technologies: ['MVC', 'Ruby on Rails', 'React', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Jest', 'Devise', 'REST API'],
+      technologies: ['MVC', 'Ruby on Rails', 'React', 'RSpec', 'PostgreSQL', 'HTML', 'SCSS', 'Tailwind CSS', 'Jest', 'REST API'],
       links: [
         { text: 'Source Code', url: 'https://github.com/romans-adi/travel-booking-frontend' },
         { text: 'Live Demo', url: 'https://traveli.onrender.com/' },
@@ -184,7 +210,7 @@ const AboutMe = () => {
   return (
     <Paper className="about-me-container" elevation={3}>
       <div className="two-column-container">
-        <div className="left-column">
+        <div className={`left-column ${leftColumnOpen ? 'open' : 'closed'}`} ref={elementRef}>
           <div className="description">
             <Typography
               variant="h3"
@@ -308,51 +334,62 @@ const AboutMe = () => {
           </div>
         </div>
         <div className="right-column">
+          <button type="button" onClick={toggleLeftColumn} className="toggle-button">
+            {leftColumnOpen ? (
+              '«'
+            ) : (
+              <>
+                <span className="vertical-text">About me</span>
+              </>
+            )}
+          </button>
           <div className="text-container">
             <Typography variant="body1" className="content">
-              I&apos;m Romans, a versatile software developer experienced in UI/UX design and proficient in HTML, CSS, JavaScript (including
-              {' '}
-              <strong>React</strong>
-              {' '}
-              and some Vue.js), as well as having some experience with PHP,
-              {' '}
-              <strong>Ruby</strong>
-              , and relational databases (RDBMS). Recently, I learned
-              {' '}
-              <strong>Ruby on Rails</strong>
-              , and I&apos;m excited to apply my knowledge. I&apos;m passionate about solving problems and finding innovative solutions.
-              <br />
-              <br />
-              I&apos;ve hitchhiked almost the same number of kilometers as the hours I&apos;ve spent coding, emphasizing the balance I strive to maintain in life.
-              <br />
-              <br />
-              I trained at Microverse, online coding school, where I gained a strong foundation in software development principles by collaborating with diverse developers and have successfully executed projects that demonstrate my ability to create high-quality web solutions with engaging user experiences and efficient backend functionalities.
-              {' '}
-              <br />
-              <br />
-              I am actively pursuing new software engineering opportunities and bring a strong commitment, adaptability, and a desire to discuss how my skills can enhance your team.
-              {' '}
-              <button
-                type="button"
-                tabIndex={0}
-                onClick={handleClickOrKeyPress}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    handleClickOrKeyPress();
-                  }
-                }}
-                className="highlight-container"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                <span
-                  className="highlight"
+              <TypingComponent />
+              <p>
+                As a flexible software developer, my expertise extends to UI/UX design, and I command a skill set encompassing HTML, CSS, JavaScript (including
+                {' '}
+                <strong>React</strong>
+                {' '}
+                and some Vue.js), Ruby (including the robust
+                {' '}
+                <strong>Rails</strong>
+                {' '}
+                framework), as well as experience with PHP and relational databases (RDBMS).
+              </p>
+              <p>
+                Journeys, both on the road and in the code, reflect the balance I ardently maintain in life. I&apos;ve covered a comparable distance hitchhiking as the hours dedicated to coding.
+              </p>
+              <p>
+                I honed my skills at Microverse, an online coding school, collaborating with a diverse cohort of developers. This experience has equipped me with a solid foundation in software development principles. My portfolio is a testament to my ability to construct high-quality web solutions, blending engaging user experiences with a keen eye for UI/UX design.
+              </p>
+              <p>
+                As I actively seek new software engineering opportunities, I bring a resolute commitment, unwavering adaptability, and an insatiable appetite for discussing how my skills can elevate your team.
+              </p>
+              <p>
+                <button
+                  type="button"
+                  tabIndex={0}
+                  onClick={handleClickOrKeyPress}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      handleClickOrKeyPress();
+                    }
+                  }}
+                  className="highlight-container"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  I invite you
-                </span>
-              </button>
-              {' '}
-              to connect so that we can explore the potential for collaboration, ultimately achieving outstanding results together.
+                  <span
+                    className="highlight"
+                  >
+                    I invite you
+                  </span>
+                </button>
+                {' '}
+                to connect, setting the stage for us to explore the possibilities of collaboration, ultimately steering toward achieving exceptional results together.
+                {' '}
+              </p>
             </Typography>
           </div>
           <div className="project-cards">
