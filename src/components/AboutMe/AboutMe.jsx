@@ -325,7 +325,7 @@ const AboutMe = () => {
             <a href="https://github.com/romans-adi" target="_blank" rel="noopener noreferrer" className="network-icon-link">
               <FaGithub className="network-icon" />
             </a>
-            <a href="www.linkedin.com/in/romansspilaks" target="_blank" rel="noopener noreferrer" className="network-icon-link">
+            <a href="https://www.linkedin.com/in/romansspilaks" target="_blank" rel="noopener noreferrer" className="network-icon-link">
               <FaLinkedin className="network-icon" />
             </a>
             <a href="https://wellfound.com/u/romans-spilaks" target="_blank" rel="noopener noreferrer" className="network-icon-link">
